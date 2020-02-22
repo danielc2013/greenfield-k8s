@@ -1,0 +1,1 @@
+kubeadm join 192.168.50.10:6443 --token hoyove.32v9vpqenqzw9yxi     --discovery-token-ca-cert-hash sha256:ae6dc537a1758da8039a4f99fece7eba2ea9913caeb0833f1a31cf84cf8116ae 
