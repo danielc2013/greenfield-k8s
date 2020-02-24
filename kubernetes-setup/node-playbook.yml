@@ -78,6 +78,11 @@
           - kubeadm
           - kubectl
 
+    - name: Configure node ip
+      lineinfile:
+        path: /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+        line: EnvironmentFile="KUBELET_EXTRA_ARGS=--node-ip={{ node_ip }}"
+
     - name: Restart kubelet
       service:
         name: kubelet
